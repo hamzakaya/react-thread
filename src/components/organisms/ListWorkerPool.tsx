@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 // @ts-ignore
 import HesaplaWorker from 'comlink-loader!../../workers/hesapla.worker'
-import { Suspendable, useSuspendableData } from 'react-suspendable-contract'
+import { Suspendable, useSuspendableData } from 'react-suspense-data'
 import TextField from '@material-ui/core/TextField'
 import VirtualList from '../molecules/VirtualList'
 import {

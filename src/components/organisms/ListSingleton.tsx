@@ -1,6 +1,6 @@
 import React from 'react'
 import { hesapla } from '../../workers/hesapla.worker.singleton'
-import { Suspendable, useSuspendableData } from 'react-suspendable-contract'
+import { Suspendable, useSuspendableData } from 'react-suspense-data'
 import { ErrorBoundary } from '../atom/ErrorBoundary'
 import VirtualList from '../molecules/VirtualList'
 import Loading from '../atom/Loading'

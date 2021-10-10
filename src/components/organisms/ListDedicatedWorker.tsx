@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 // @ts-ignore
 import HesaplaWorker from 'comlink-loader!../../workers/hesapla.worker'
-import { Suspendable, useSuspendableData } from 'react-suspendable-contract'
+import { Suspendable, useSuspendableData } from 'react-suspense-data'
 import { ErrorBoundary } from '../atom/ErrorBoundary'
 import VirtualList from '../molecules/VirtualList'
 import Loading from '../atom/Loading'
