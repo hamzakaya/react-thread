@@ -16,7 +16,16 @@ export const FonksiyonuGoster = () => (
   <Box px={2}>
     <pre>
       <p>Uzun süren bir fonksiyon örneği.</p>
-      {String(hesapla)}
+      {String(`function hesapla(sayi, uzeri) {
+    var result = 0;
+    var i = 0;
+    var len = Math.pow(sayi, uzeri);
+    while (i < len) {
+        result += Math.sin(i) * Math.sin(i) + Math.cos(i) * Math.cos(i);
+        i++;
+    }
+    return result;
+}`)}
     </pre>
   </Box>
 )
