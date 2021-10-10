@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
     
     steps:
     - uses: actions/checkout@v2
@@ -21,9 +21,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
     - name: Build
-      run: |
-        npm install
-        npm run build
+    - run: yarn
+    - run: yarn build
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
