@@ -18,7 +18,7 @@
     "@material-ui/core": "^4.12.3",
     "@types/react-virtualized": "^9.21.13",
     "comlink-loader": "^2.0.0",
-    "react-suspense-data": "^0.1.0",
+    "react-suspense-data": "^0.1.1",
     "react-virtualized": "^9.22.3"
   },
   "devDependencies": {

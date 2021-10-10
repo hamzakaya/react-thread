@@ -56,19 +56,27 @@ export default function ListWorkerPool() {
     <>
       <VirtualList
         headerComp={() => (
-          <TextField
-            id="standard-basic"
-            label="Worker Pool Sayısı"
-            required
-            type="number"
-            variant="outlined"
-            defaultValue={poolSize}
-            inputProps={{ step: 1 }}
-            onChange={(event: React.ChangeEvent<{ value: string }>) => {
-              setPoolSize(Number(event.target.value))
+          <div
+            style={{
+              position: 'relative',
+              float: 'left',
+              top: '-65px',
+              width: '100px',
             }}
-            style={{ cssFloat: 'left', top: '-65px', width: '100px' }}
-          />
+          >
+            <TextField
+              id="poolCount"
+              label="Worker Pool Sayısı"
+              required
+              type="number"
+              variant="outlined"
+              defaultValue={poolSize}
+              inputProps={{ step: 1 }}
+              onChange={(event: React.ChangeEvent<{ value: string }>) => {
+                setPoolSize(Number(event.target.value))
+              }}
+            />
+          </div>
         )}
         rowRendererProvider={(base, pow) =>
           ({ key, index, style }) =>
