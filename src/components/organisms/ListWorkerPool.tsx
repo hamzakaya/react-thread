@@ -67,6 +67,7 @@ export default function ListWorkerPool() {
             onChange={(event: React.ChangeEvent<{ value: string }>) => {
               setPoolSize(Number(event.target.value))
             }}
+            style={{ cssFloat: 'left', top: '-65px', width: '100px' }}
           />
         )}
         rowRendererProvider={(base, pow) =>
